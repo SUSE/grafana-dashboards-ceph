@@ -1,7 +1,7 @@
 {
   "__inputs": [
     {
-      "name": "DS_PROM_INSTANCE",
+      "name": "DS_PROMETHEUS",
       "label": "prometheus",
       "description": "",
       "type": "datasource",
@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.1.0"
+      "version": "3.1.1"
     },
     {
       "type": "panel",
@@ -38,9 +38,8 @@
   "annotations": {
     "list": []
   },
-  "description": "CEPH OSD Status.",
-  "editable": true,
-  "gnetId": 923,
+  "description": "Ceph OSD status.\r\n",
+  "editable": false,
   "graphTooltip": 0,
   "hideControls": false,
   "id": null,
@@ -60,7 +59,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "editable": true,
           "error": false,
           "format": "percent",
@@ -134,7 +133,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -242,7 +241,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 5,
           "editable": true,
           "error": false,
@@ -334,7 +333,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -421,7 +420,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -625,7 +624,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_PROM_INSTANCE}",
+        "datasource": "${DS_PROMETHEUS}",
         "hide": 0,
         "includeAll": false,
         "label": "OSD",
@@ -645,7 +644,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {

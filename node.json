@@ -1,7 +1,7 @@
 {
   "__inputs": [
     {
-      "name": "DS_PROM_INSTANCE",
+      "name": "DS_PROMETHEUS",
       "label": "prometheus",
       "description": "",
       "type": "datasource",
@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.1.0"
+      "version": "3.1.1"
     },
     {
       "type": "panel",
@@ -39,8 +39,7 @@
     "list": []
   },
   "description": "Basic host stats: CPU, Memory Usage, Disk Utilisation,  Filesystem usage and Predicted time to filesystems filling",
-  "editable": true,
-  "gnetId": 718,
+  "editable": false,
   "graphTooltip": 0,
   "hideControls": false,
   "id": null,
@@ -54,7 +53,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -129,7 +128,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -241,7 +240,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -314,7 +313,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -458,7 +457,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
           "id": 6,
           "legend": {
@@ -529,7 +528,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
           "id": 7,
           "legend": {
@@ -600,7 +599,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
           "id": 8,
           "legend": {
@@ -686,7 +685,7 @@
         "allFormat": "glob",
         "allValue": null,
         "current": {},
-        "datasource": "${DS_PROM_INSTANCE}",
+        "datasource": "${DS_PROMETHEUS}",
         "hide": 0,
         "hideLabel": false,
         "includeAll": false,
@@ -708,8 +707,8 @@
     ]
   },
   "time": {
-    "from": "2017-05-30T01:46:37.227Z",
-    "to": "2017-05-30T13:46:37.227Z"
+    "from": "now-12h",
+    "to": "now"
   },
   "timepicker": {
     "now": true,

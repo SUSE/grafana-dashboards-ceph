@@ -1,9 +1,9 @@
 {
   "__inputs": [
     {
-      "name": "DS_PROM_INSTANCE",
-      "label": "prometheus",
-      "description": "",
+      "name": "DS_PROMETHEUS",
+      "label": "þrometheus",
+      "description": "Prometheus.IO",
       "type": "datasource",
       "pluginId": "prometheus",
       "pluginName": "Prometheus"
@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.1.0"
+      "version": "3.1.1"
     },
     {
       "type": "panel",
@@ -38,9 +38,8 @@
   "annotations": {
     "list": []
   },
-  "description": "Ceph Pools dashboard.",
-  "editable": true,
-  "gnetId": 926,
+  "description": "Ceph Pools overview.",
+  "editable": false,
   "graphTooltip": 0,
   "hideControls": false,
   "id": null,
@@ -54,7 +53,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -182,7 +181,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -272,7 +271,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -357,7 +356,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -444,7 +443,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_PROM_INSTANCE}",
+          "datasource": "${DS_PROMETHEUS}",
           "decimals": 2,
           "editable": true,
           "error": false,
@@ -623,7 +622,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_PROM_INSTANCE}",
+        "datasource": "${DS_PROMETHEUS}",
         "hide": 0,
         "includeAll": false,
         "label": "Pool",
@@ -643,7 +642,7 @@
     ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {
