@@ -49,6 +49,7 @@ install -m 644 ./*.json %{buildroot}%{_datadir}/%{name}/dashboards
 
 %files
 %defattr(-,root,root,-)
+%{_datadir}/%{name}/
 %{_datadir}/%{name}/dashboards/
 %{_datadir}/%{name}/dashboards/ceph-cluster.json
 %{_datadir}/%{name}/dashboards/ceph-osd.json
