@@ -41,8 +41,8 @@ A few dashboards that should help to monitor a Ceph cluster
 %build
 
 %install
-install -d -m 755 $(DESTDIR)/usr/share/grafana/dashboards
-install -m 644 ./*.json $(DESTDIR)/usr/share/grafana/dashboards
+install -d -m 755 %{buildroot}/usr/share/grafana/dashboards
+install -m 644 ./*.json %{buildroot}/usr/share/grafana/dashboards
 
 %post
 
