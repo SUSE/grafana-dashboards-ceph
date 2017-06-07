@@ -50,7 +50,8 @@ install -m 644 ./*.json %{buildroot}%{_datadir}/grafana/dashboards
 
 %files
 %defattr(-,root,root,-)
-%config %{_datadir}/grafana/dashboards/ceph-cluster.json
-%config %{_datadir}/grafana/dashboards/ceph-osd.json
-%config %{_datadir}/grafana/dashboards/ceph-pools.json
-%config %{_datadir}/grafana/dashboards/node.json
+%{_datadir}/grafana/dashboards/
+%{_datadir}/grafana/dashboards/ceph-cluster.json
+%{_datadir}/grafana/dashboards/ceph-osd.json
+%{_datadir}/grafana/dashboards/ceph-pools.json
+%{_datadir}/grafana/dashboards/node.json
