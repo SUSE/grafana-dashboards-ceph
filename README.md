@@ -9,5 +9,5 @@ following config in /etc/grafana/grafana.ini:
 ```
     [dashbords.json]
         enabled = true
-        path = /var/lib/grafana/dashboards
+        path = /usr/share/grafana/dashboards
 ```
