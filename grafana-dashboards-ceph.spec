@@ -27,7 +27,6 @@ Group:          System/Monitoring
 Url:            http://bugs.opensuse.org
 Source0:        %{name}-%{version}.tar.gz
 
-Requires:       grafana
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 
@@ -41,8 +40,8 @@ A few dashboards that should help to monitor a Ceph cluster
 %build
 
 %install
-install -d -m 755 %{buildroot}%{_datadir}/grafana/dashboards
-install -m 644 ./*.json %{buildroot}%{_datadir}/grafana/dashboards
+install -d -m 755 %{buildroot}%{_datadir}/%{name}/dashboards
+install -m 644 ./*.json %{buildroot}%{_datadir}/%{name}/dashboards
 
 %post
 
@@ -50,8 +49,8 @@ install -m 644 ./*.json %{buildroot}%{_datadir}/grafana/dashboards
 
 %files
 %defattr(-,root,root,-)
-%{_datadir}/grafana/dashboards/
-%{_datadir}/grafana/dashboards/ceph-cluster.json
-%{_datadir}/grafana/dashboards/ceph-osd.json
-%{_datadir}/grafana/dashboards/ceph-pools.json
-%{_datadir}/grafana/dashboards/node.json
+%{_datadir}/%{name}/dashboards/
+%{_datadir}/%{name}/dashboards/ceph-cluster.json
+%{_datadir}/%{name}/dashboards/ceph-osd.json
+%{_datadir}/%{name}/dashboards/ceph-pools.json
+%{_datadir}/%{name}/dashboards/node.json
