@@ -20,6 +20,7 @@ Name:           grafana-dashboards-ceph
 Version:        0.1
 Release:        0
 Summary:        Grafana dashboards to monitor a Ceph cluster
+%define branch master
 
 License:        Apache-2.0
 Group:          System/Monitoring
@@ -35,7 +36,7 @@ A few dashboards that should help to monitor a Ceph cluster
 
 
 %prep
-%setup
+%setup -n %name-%branch
 
 %build
 
