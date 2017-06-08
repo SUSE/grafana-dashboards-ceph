@@ -2,8 +2,8 @@
   "__inputs": [
     {
       "name": "DS_PROMETHEUS",
-      "label": "prometheus",
-      "description": "",
+      "label": "Prometheus",
+      "description": "Prometheus.IO",
       "type": "datasource",
       "pluginId": "prometheus",
       "pluginName": "Prometheus"
