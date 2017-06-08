@@ -40,18 +40,18 @@ A few dashboards that should help to monitor a Ceph cluster
 %build
 
 %install
-install -d -m 755 %{buildroot}%{_datadir}/%{name}/dashboards
-install -m 644 ./*.json %{buildroot}%{_datadir}/%{name}/dashboards
+install -d -m 755 %{buildroot}/var/lib/grafana/dashboards
+install -m 644 ./*.json %{buildroot}/var/lib/grafana/dashboards
 
 %post
 
 %postun
 
 %files
-%defattr(-,root,root,-)
-%{_datadir}/%{name}/
-%{_datadir}/%{name}/dashboards/
-%{_datadir}/%{name}/dashboards/ceph-cluster.json
-%{_datadir}/%{name}/dashboards/ceph-osd.json
-%{_datadir}/%{name}/dashboards/ceph-pools.json
-%{_datadir}/%{name}/dashboards/node.json
+%defattr(-,grafana,grafana,-)
+/var/lib/grafana/
+/var/lib/grafana/dashboards/
+/var/lib/grafana/dashboards/ceph-cluster.json
+/var/lib/grafana/dashboards/ceph-osd.json
+/var/lib/grafana/dashboards/ceph-pools.json
+/var/lib/grafana/dashboards/node.json
