@@ -27,7 +27,6 @@ Group:          System/Monitoring
 Url:            http://bugs.opensuse.org
 Source0:        %{name}-%{version}.tar.gz
 
-BuildRequires:  grafana
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 
@@ -47,7 +46,9 @@ install -m 644 ./*.json %{buildroot}/var/lib/grafana/dashboards
 %files
 %defattr(-,root,root,-)
 %doc LICENSE
-%defattr(-,grafana,grafana,-)
+#defattr(-,grafana,grafana,-)
+%dir /var/lib/grafana/
+%dir /var/lib/grafana/dashboards
 /var/lib/grafana/dashboards/ceph-cluster.json
 /var/lib/grafana/dashboards/ceph-osd.json
 /var/lib/grafana/dashboards/ceph-pools.json
