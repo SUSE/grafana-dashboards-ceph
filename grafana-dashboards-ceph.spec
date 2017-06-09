@@ -27,6 +27,7 @@ Group:          System/Monitoring
 Url:            http://bugs.opensuse.org
 Source0:        %{name}-%{version}.tar.gz
 
+BuildRequires:  grafana
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 
