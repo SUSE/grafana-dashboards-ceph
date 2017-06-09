@@ -43,10 +43,6 @@ help to monitor a Ceph cluster.
 install -d -m 755 %{buildroot}/var/lib/grafana/dashboards
 install -m 644 ./*.json %{buildroot}/var/lib/grafana/dashboards
 
-%post
-
-%postun
-
 %files
 %defattr(-,root,root,-)
 %doc LICENSE
