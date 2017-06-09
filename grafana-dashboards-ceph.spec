@@ -1,5 +1,5 @@
 #
-# spec file for package some ceph grafana dashboards
+# spec file for package grafana-dashboards-ceph
 #
 # Copyright (c) 2017 SUSE LINUX GmbH, Nuernberg, Germany.
 #
@@ -53,3 +53,5 @@ install -m 644 ./*.json %{buildroot}/var/lib/grafana/dashboards
 /var/lib/grafana/dashboards/ceph-osd.json
 /var/lib/grafana/dashboards/ceph-pools.json
 /var/lib/grafana/dashboards/node.json
+
+%changelog
