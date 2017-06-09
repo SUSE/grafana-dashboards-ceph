@@ -31,8 +31,8 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 
 %description
-A few dashboards that should help to monitor a Ceph cluster
-
+A few dashboards for the Grafana analytics and monitoring platform that should
+help to monitor a Ceph cluster.
 
 %prep
 %setup -n %name-%branch
@@ -42,20 +42,16 @@ A few dashboards that should help to monitor a Ceph cluster
 %install
 install -d -m 755 %{buildroot}/var/lib/grafana/dashboards
 install -m 644 ./*.json %{buildroot}/var/lib/grafana/dashboards
-install -d -m 755 %{buildroot}/%{_docdir}/%{name}
-install -m 644 LICENSE %{buildroot}/%{_docdir}/%{name}/LICENSE
 
 %post
 
 %postun
 
 %files
+%defattr(-,root,root,-)
+%doc LICENSE
 %defattr(-,grafana,grafana,-)
-/var/lib/grafana/
-/var/lib/grafana/dashboards/
 /var/lib/grafana/dashboards/ceph-cluster.json
 /var/lib/grafana/dashboards/ceph-osd.json
 /var/lib/grafana/dashboards/ceph-pools.json
 /var/lib/grafana/dashboards/node.json
-%dir %attr(-, root, root) %{_docdir}/%{name}
-%{_docdir}/%{name}/*
