@@ -90,7 +90,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_pool_available_bytes{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}",
+              "expr": "ceph_pool_available_bytes{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Avilable - {{ pool }}",
@@ -99,7 +99,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_pool_used_bytes{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}",
+              "expr": "ceph_pool_used_bytes{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Used - {{ pool }}",
@@ -108,7 +108,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_pool_used_bytes{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"} + ceph_pool_available_bytes{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}",
+              "expr": "ceph_pool_used_bytes{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"} + ceph_pool_available_bytes{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Total - {{ pool }}",
@@ -117,7 +117,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_pool_raw_used_bytes{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}",
+              "expr": "ceph_pool_raw_used_bytes{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Raw - {{ pool }}",
@@ -227,7 +227,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_pool_used_bytes{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"} / ceph_pool_available_bytes{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}",
+              "expr": "ceph_pool_used_bytes{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"} / ceph_pool_available_bytes{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}",
               "intervalFactor": 2,
               "refId": "B",
               "step": 240
@@ -291,7 +291,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_pool_objects_total{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}",
+              "expr": "ceph_pool_objects_total{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Objects - {{ pool }}",
@@ -299,7 +299,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_pool_dirty_objects_total{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}",
+              "expr": "ceph_pool_dirty_objects_total{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Dirty Objects - {{ pool }}",
@@ -378,7 +378,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(ceph_pool_read_total{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
+              "expr": "irate(ceph_pool_read_total{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Read - {{ pool }}",
@@ -386,7 +386,7 @@
               "step": 60
             },
             {
-              "expr": "irate(ceph_pool_write_total{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
+              "expr": "irate(ceph_pool_write_total{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Write - {{ pool }}",
@@ -465,7 +465,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(ceph_pool_read_bytes_total{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
+              "expr": "irate(ceph_pool_read_bytes_total{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Read Bytes - {{ pool }}",
@@ -473,7 +473,7 @@
               "step": 60
             },
             {
-              "expr": "irate(ceph_pool_write_bytes_total{alias=\"ceph-exporter\",cluster=\"ceph\",instance=\"localhost:9128\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
+              "expr": "irate(ceph_pool_write_bytes_total{alias=\"ceph-exporter\",cluster=\"$$ceph\",instance=\"$instance\",job=\"ceph-exporter\",pool=\"$pool\"}[3m])",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Written Bytes - {{ pool }}",
