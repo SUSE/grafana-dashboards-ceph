@@ -48,7 +48,4 @@ install -m 644 ./*.json %{buildroot}/var/lib/grafana-dashboards-ceph
 %doc LICENSE
 /var/lib/grafana-dashboards-ceph
 
-%pre
-
-
 %changelog
