@@ -40,18 +40,15 @@ help to monitor a Ceph cluster.
 %build
 
 %install
-install -d -m 755 %{buildroot}/var/lib/grafana/dashboards
-install -m 644 ./*.json %{buildroot}/var/lib/grafana/dashboards
+install -d -m 755 %{buildroot}/var/lib/grafana-dashboards-ceph
+install -m 644 ./*.json %{buildroot}/var/lib/grafana-dashboards-ceph
 
 %files
 %defattr(-,root,root,-)
 %doc LICENSE
-#defattr(-,grafana,grafana,-)
-%dir /var/lib/grafana/
-%dir /var/lib/grafana/dashboards
-/var/lib/grafana/dashboards/ceph-cluster.json
-/var/lib/grafana/dashboards/ceph-osd.json
-/var/lib/grafana/dashboards/ceph-pools.json
-/var/lib/grafana/dashboards/node.json
+/var/lib/grafana-dashboards-ceph
+
+%pre
+
 
 %changelog
