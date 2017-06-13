@@ -40,12 +40,12 @@ help to monitor a Ceph cluster.
 %build
 
 %install
-install -d -m 755 %{buildroot}/var/lib/grafana-dashboards-ceph
-install -m 644 ./*.json %{buildroot}/var/lib/grafana-dashboards-ceph
+install -d -m 755 %{buildroot}/var/lib/%{name}
+install -m 644 ./*.json %{buildroot}/var/lib/%{name}
 
 %files
 %defattr(-,root,root,-)
 %doc LICENSE
-/var/lib/grafana-dashboards-ceph
+/var/lib/%{name}
 
 %changelog
