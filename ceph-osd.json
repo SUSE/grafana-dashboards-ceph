@@ -97,7 +97,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_osd_utilization{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter',osd='$osd'}",
+              "expr": "ceph_osd_utilization{alias='ceph-exporter',cluster='$cluster',instance='$instance',job='ceph-exporter',osd='$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",

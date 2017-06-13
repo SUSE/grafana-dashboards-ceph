@@ -97,7 +97,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_health_status{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_health_status{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "refId": "A",
@@ -185,7 +185,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_monitor_quorum_count{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_monitor_quorum_count{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -343,7 +343,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_cluster_capacity_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_cluster_capacity_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -422,7 +422,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_cluster_used_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_cluster_used_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -502,7 +502,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_cluster_available_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}/ceph_cluster_capacity_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_cluster_available_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}/ceph_cluster_capacity_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -593,7 +593,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_osds_in{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_osds_in{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -671,7 +671,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_osds_down{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_osds_down{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -749,7 +749,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_osds_up{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_osds_up{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -827,7 +827,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_osds_down{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_osds_down{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -1224,7 +1224,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_cluster_available_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_cluster_available_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Available",
@@ -1232,7 +1232,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_cluster_used_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_cluster_used_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Used",
@@ -1240,7 +1240,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_cluster_capacity_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_cluster_capacity_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Total Capacity",
@@ -1327,7 +1327,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_client_io_write_ops{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_client_io_write_ops{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Write",
@@ -1335,7 +1335,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_client_io_read_ops{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_client_io_read_ops{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Read",
@@ -1414,7 +1414,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_client_io_write_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_client_io_write_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Write",
@@ -1422,7 +1422,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_client_io_read_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_client_io_read_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Read",
@@ -2100,7 +2100,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_osd_used_bytes{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter'}",
+              "expr": "ceph_osd_used_bytes{cluster='$cluster',instance='$instance',job='ceph-exporter'}",
               "intervalFactor": 1,
               "legendFormat": "{{osd}}",
               "refId": "J",
