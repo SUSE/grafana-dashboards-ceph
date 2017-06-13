@@ -914,7 +914,7 @@
             }
           ],
           "thresholds": "250,300",
-          "title": "Agerage PGs per OSD",
+          "title": "Average PGs per OSD",
           "type": "singlestat",
           "valueFontSize": "80%",
           "valueMaps": [
@@ -992,7 +992,7 @@
             }
           ],
           "thresholds": "0.01,0.05",
-          "title": "Agerage OSD Apply Latency",
+          "title": "Average OSD Apply Latency",
           "type": "singlestat",
           "valueFontSize": "80%",
           "valueMaps": [
@@ -1070,7 +1070,7 @@
             }
           ],
           "thresholds": "0.01,0.05",
-          "title": "Agerage OSD Commit Latency",
+          "title": "Average OSD Commit Latency",
           "type": "singlestat",
           "valueFontSize": "80%",
           "valueMaps": [
