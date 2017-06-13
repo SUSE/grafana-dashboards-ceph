@@ -686,7 +686,7 @@
         "options": [],
         "query": "up{job='node-exporter'}",
         "refresh": 1,
-        "regex": ".*instance='(.*?)'.*",
+        "regex": ".*instance=\"(.*?)\".*",
         "sort": 0,
         "tagValuesQuery": "",
         "tags": [],
