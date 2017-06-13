@@ -72,7 +72,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "avg without (cpu)(irate(node_cpu{job=\"node-exporter\",instance=\"$instance\",mode!=\"idle\"}[5m]))",
+              "expr": "avg without (cpu)(irate(node_cpu{job='node-exporter',instance='$instance',mode!='idle'}[5m]))",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "{{mode}}",
@@ -473,7 +473,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "node_disk_bytes_written{instance=\"$instance\",job=\"node-exporter\"}",
+              "expr": "node_disk_bytes_written{instance='$instance',job='node-exporter'}",
               "intervalFactor": 1,
               "legendFormat": "{{device}}",
               "refId": "A",
@@ -544,7 +544,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "node_disk_bytes_read{instance=\"$instance\",job=\"node-exporter\"}",
+              "expr": "node_disk_bytes_read{instance='$instance',job='node-exporter'}",
               "intervalFactor": 1,
               "legendFormat": "{{device}}",
               "refId": "A",
@@ -615,7 +615,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "node_disk_io_time_ms{instance=\"$instance\",job=\"node-exporter-exporter\"}",
+              "expr": "node_disk_io_time_ms{instance='$instance',job='node-exporter-exporter'}",
               "intervalFactor": 1,
               "legendFormat": "{{device}}",
               "refId": "A",
@@ -684,9 +684,9 @@
         "multiFormat": "glob",
         "name": "instance",
         "options": [],
-        "query": "up{job=\"node-exporter\"}",
+        "query": "up{job='node-exporter'}",
         "refresh": 1,
-        "regex": ".*instance=\"(.*?)\".*",
+        "regex": ".*instance='(.*?)'.*",
         "sort": 0,
         "tagValuesQuery": "",
         "tags": [],

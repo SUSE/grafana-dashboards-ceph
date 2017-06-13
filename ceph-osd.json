@@ -97,7 +97,7 @@
           },
           "targets": [
             {
-              "expr": "ceph_osd_utilization{alias=\"ceph-exporter\",cluster=\"$ceph\",instance=\"$instance\",job=\"ceph-exporter\",osd=\"$osd\"}",
+              "expr": "ceph_osd_utilization{alias='ceph-exporter',cluster='$ceph',instance='$instance',job='ceph-exporter',osd='$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -161,7 +161,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_osd_pgs{osd=~\"$osd\"}",
+              "expr": "ceph_osd_pgs{osd=~'$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Number of PGs - {{ osd }}",
@@ -263,7 +263,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_osd_variance{osd=~\"$osd\"}",
+              "expr": "ceph_osd_variance{osd=~'$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Available - {{ osd }}",
@@ -355,7 +355,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_osd_perf_apply_latency_seconds{osd=~\"$osd\"}",
+              "expr": "ceph_osd_perf_apply_latency_seconds{osd=~'$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Apply Latency (s) - {{ osd }}",
@@ -363,7 +363,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_osd_perf_commit_latency_seconds{osd=~\"$osd\"}",
+              "expr": "ceph_osd_perf_commit_latency_seconds{osd=~'$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Commit Latency (s) - {{ osd }}",
@@ -442,7 +442,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "ceph_osd_avail_bytes{osd=~\"$osd\"}",
+              "expr": "ceph_osd_avail_bytes{osd=~'$osd'}",
               "hide": false,
               "interval": "$interval",
               "intervalFactor": 1,
@@ -452,7 +452,7 @@
               "step": 60
             },
             {
-              "expr": "ceph_osd_used_bytes{osd=~\"$osd\"}",
+              "expr": "ceph_osd_used_bytes{osd=~'$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
               "legendFormat": "Used - {{ osd }}",
@@ -610,6 +610,52 @@
         "query": "1m,10m,30m,1h,6h,12h,1d,7d,14d,30d",
         "refresh": 2,
         "type": "interval"
+      },
+      {
+        "allFormat": "glob",
+        "allValue": null,
+        "current": {},
+        "datasource": "Prometheus",
+        "hide": 0,
+        "hideLabel": false,
+        "includeAll": false,
+        "label": "Cluster",
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "cluster",
+        "options": [],
+        "query": "ceph_health_status{job='ceph-exporter'}",
+        "refresh": 1,
+        "regex": ".*cluster='(.*?)'.*",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allFormat": "glob",
+        "allValue": null,
+        "current": {},
+        "datasource": "Prometheus",
+        "hide": 0,
+        "hideLabel": false,
+        "includeAll": false,
+        "label": "Exporter Instance",
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "instance",
+        "options": [],
+        "query": "ceph_health_status{job='ceph-exporter'}",
+        "refresh": 1,
+        "regex": ".*instance='(.*?)'.*",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
       },
       {
         "allValue": null,
