@@ -164,7 +164,7 @@
               "expr": "ceph_osd_pgs{osd=~'$osd'}",
               "interval": "$interval",
               "intervalFactor": 1,
-              "legendFormat": "Number of PGs - {{ osd }}",
+              "legendFormat": "Number of Placement Groups - {{ osd }}",
               "refId": "A",
               "step": 60
             },
@@ -172,7 +172,7 @@
               "expr": "avg(ceph_osd_pgs)",
               "interval": "$interval",
               "intervalFactor": 1,
-              "legendFormat": "Average Number of PGs in the Cluster",
+              "legendFormat": "Average Number of Placement Groups in Cluster",
               "refId": "B",
               "step": 60
             }

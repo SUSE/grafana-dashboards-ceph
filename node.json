@@ -28,7 +28,7 @@
   "annotations": {
     "list": []
   },
-  "description": "Basic host stats: CPU, Memory Usage, Disk Utilisation,  Filesystem usage and Predicted time to filesystems filling",
+  "description": "Basic host stats: CPU, Memory Usage, Disk Utilization,  Filesystem usage and Predicted time to filesystems filling",
   "editable": false,
   "graphTooltip": 0,
   "hideControls": false,
@@ -269,7 +269,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Disk I/O Utilisation",
+          "title": "Disk I/O Utilization",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -343,7 +343,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Filesystem Fullness",
+          "title": "Filesystem Utilization",
           "tooltip": {
             "msResolution": false,
             "shared": true,
